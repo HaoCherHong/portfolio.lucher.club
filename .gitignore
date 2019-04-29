@@ -1,0 +1,5 @@
+node_modules/
+dist/
+package-lock.json
+config.json
+SampleVideo_1280x720_10mb.mp4
