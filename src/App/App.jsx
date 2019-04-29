@@ -1,64 +1,33 @@
 import React from "react";
 import { hot } from 'react-hot-loader/root'
-import cx from "classnames";
-import { BrowserRouter, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter, Switch, Route, Redirect, withRouter } from "react-router-dom";
 
-import projects from './projects.json';
+import Home from './Home';
+import Project from "./Project";
 
-import {
-  block,
-  typeBlock,
-  typeBlockType,
-  typeBlockTypeTitle,
-  typeBlockTypeItem,
-  typeBlockTypeItemTitle,
-  typeBlockTypeItemCaption,
-  typeBlockTypeItemTag
-} from './App.css';
-
-import Intro from './Intro';
-import DcardMobileWeb from "./projects/DcardMobileWeb/DcardMobileWeb.jsx";
-
-const Menu = () => (
-  <div className={cx(block, typeBlock)}>
-    {
-      Object.keys(projects).map(type => (
-        <div className={typeBlockType} key={type}>
-          <div className={typeBlockTypeTitle}>{type}</div>
-          {
-            projects[type].map((item, i) => (
-              <Link to={item.link}>
-                <div className={typeBlockTypeItem} key={i}>
-                  <div className={typeBlockTypeItemTitle}>
-                    {item.title}
-                  </div>
-                  <div className={typeBlockTypeItemCaption}>
-                    {item.caption}
-                  </div>
-                  <div>
-                    {item.tags.map((tag, i) => <span key={i} className={typeBlockTypeItemTag}>{tag}</span>)}
-                  </div>
-                </div>
-              </Link>
-            ))
-          }
-        </div>
-      ))
+@withRouter
+class App extends React.PureComponent {
+  componentDidUpdate(prevProps, prevState) {
+    console.log(prevProps, this.props);
+    if (prevProps.location.pathname !== this.props.location.pathname) {
+      window.scrollTo(0, 0);
     }
-  </div>
-);
+  }
 
-@hot
-export default class App extends React.PureComponent {
   render() {
     return (
-      <BrowserRouter>
+      <div>
         <Switch>
-          <Route path="/" exact component={Intro}/>
-          <Route path="/dcard-mobile-web" exact component={DcardMobileWeb}/>
+          <Route path="/" exact component={Home}/>
+          <Route path="/project/" component={Project}/>
+          <Route path="*">
+            <Redirect to="/"/>
+          </Route>
         </Switch>
-        <Menu/>
-      </BrowserRouter>
+      </div>
     );
   }
 }
+
+
+export default hot(props => <BrowserRouter><App/></BrowserRouter>);

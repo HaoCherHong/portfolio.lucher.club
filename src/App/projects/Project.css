@@ -20,6 +20,10 @@
   background: white;
 }
 
+.body img {
+  max-width: 100%;
+}
+
 .header {
   margin: 0 0 64px 0;
 }
@@ -46,6 +50,7 @@
   font-size: 16px;
   font-weight: 500;
   margin: 16px 0 0 0;
+  padding: 0;
 }
 
 .feature-list li {

@@ -4,7 +4,7 @@
 			"type": "website",
 			"title": "Dcard Mobile Web",
 			"caption": "The new Mobile Web",
-			"link": "/dcard-mobile-web",
+			"link": "/project/dcard-mobile-web",
 			"tags": [
 				"Mobile",
 				"React"
@@ -14,6 +14,7 @@
 			"type": "website",
 			"title": "PUPY",
 			"caption": "Pet Adoption Platform",
+			"link": "/project/pupy",
 			"tags": [
 				"Full-Stack",
 				"Angular"
@@ -64,6 +65,7 @@
 			"type": "game",
 			"title": "SIGHT.",
 			"caption": "Original First Person Stealth Game",
+			"link": "/project/sight",
 			"tags": [
 				"Project-Manager",
 				"Game-Design",

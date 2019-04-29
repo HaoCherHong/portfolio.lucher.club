@@ -4,7 +4,7 @@ import projects from '../projects.json';
 
 import bodyMD from './body.md';
 
-const project = projects['website'][0];
+const project = projects['website'][1];
 
 export default (props) => {
   return (
@@ -17,14 +17,17 @@ export default (props) => {
           </header>
           <div className={overviewInfo}>
             <div>
-              <img width="560" src="/images/dcard_office.png"/>
+              <img width="560" src="/images/pupy.png"/>
             </div>
             <div className={overviewInfoRight}>
-              <div className={dateAndType}>{project.type}．2017 July-August</div>
+              <div className={dateAndType}>{project.type}．2017-2018</div>
               <div className={tags}>{project.tags.map((tag, i) => <span key={i} className={tagCls}>{tag}</span>)}</div>
               <ul className={featureList}>
-                <li>2 Months Intern Project</li>
-                <li>Frontend Developer</li> 
+                <li>Leader of 5 people team</li>
+                <li>Project Manager</li>
+                <li>Best Technique Award winner</li>
+                <li>Best Creativity Award winner</li>
+                <li>Original game design</li>
               </ul>
             </div>
           </div>
