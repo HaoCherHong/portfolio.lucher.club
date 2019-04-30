@@ -1,8 +1,16 @@
 import React from 'react';
 
-import dcardBody from './projectBody/dcard.md';
-import pupyBody from './projectBody/pupy.md';
-import sightBody from './projectBody/sight.md';
+import dcardBody from './body/Dcard.md';
+import pupyBody from './body/Pupy.md';
+import sightBody from './body/Sight.md';
+import bigSushiBody from './body/BigSushi.md';
+import dreamLensBody from './body/DreamLens.md';
+import escapeThePitBody from './body/EscapeThePit.md';
+import littleDinoBody from './body/LittleDino.md';
+import wooTalkWindowsBody from './body/WooTalkWindows.md';
+import ntutWinBody from './body/NTUTWin.md';
+import stockTradingBody from './body/StockTrading.md';
+import proceduralModelGenerationBody from './body/ProceduralModelGeneration.md';
 
 export const dcard = {
 	type: "website",
@@ -105,26 +113,31 @@ export const sight = {
 };
 
 export const bigSushi = {
+	id: 'bigsushi',
 	type: "game",
 	title: "BigSushi",
 	caption: "Web 2D Game Engine",
 	tags: [
 		"Game-Engine",
 		"HTML-Canvas"
-	]
+	],
+	body: bigSushiBody
 };
 
 export const escapeThePit = {
+	id: 'escape-the-pit',
 	type: "game",
 	title: "Escape the Pit",
 	caption: "",
 	tags: [
 		"3D-Modeling",
 		"Unity"
-	]
+	],
+	body: escapeThePitBody
 };
 
 export const dreamLens = {
+	id: 'dreamlens',
 	type: "game",
 	title: "DreamLens",
 	caption: "Concept Game Made in 3 Days",
@@ -132,10 +145,12 @@ export const dreamLens = {
 		"Hackathon",
 		"GGJ",
 		"Unity"
-	]
+	],
+	body: dreamLensBody
 };
 
 export const ntutWin = {
+	id: 'ntutwin',
 	type: "other",
 	title: "NTUTWin",
 	caption: "",
@@ -143,10 +158,12 @@ export const ntutWin = {
 		"HTML-Parser",
 		"WIN-APP",
 		"C#"
-	]
+	],
+	body: ntutWinBody
 };
 
 export const wooTalkWindows = {
+	id: 'wootalk-windows',
 	type: "other",
 	title: "WooTalk Windows Client",
 	caption: "",
@@ -154,7 +171,8 @@ export const wooTalkWindows = {
 		"Web-Socket",
 		"WIN-APP",
 		"C#"
-	]
+	],
+	body: wooTalkWindowsBody
 };
 
 export const wooTrans = {
@@ -176,15 +194,18 @@ export const dpen = {
 };
 
 export const littleDino = {
+	id: 'littledino',
 	type: "other",
 	title: "LittleDino",
 	caption: "Hackathon Audience Choice Award",
 	tags: [
 		"Hackathon"
-	]
+	],
+	body: littleDinoBody
 };
 
 export const stockTrading = {
+	id: 'stock-trading',
 	type: "other",
 	title: "Stock Trading Stretagy Simulator",
 	caption: "",
@@ -192,10 +213,12 @@ export const stockTrading = {
 		"HTML-Parser",
 		"Crawler",
 		"React"
-	]
+	],
+	body: stockTradingBody
 };
 
 export const proceduralModelGeneration = {
+	id: 'procedural-model-generation',
 	type: "other",
 	title: "Procedural Model Generation",
 	caption: "",
@@ -203,7 +226,8 @@ export const proceduralModelGeneration = {
 		"3D-Modeling",
 		"Maya",
 		"Python"
-	]
+	],
+	body: proceduralModelGenerationBody
 };
 
 export default [
