@@ -2,7 +2,7 @@ import React from 'react';
 import cx from "classnames";
 import {Link} from 'react-router-dom';
 
-import projects from './projects/projects.json';
+import projects from './Project/projects';
 
 import {
   block,
@@ -15,31 +15,35 @@ import {
   typeBlockTypeItemTag
 } from './App.css';
 
+function renderCategory(title, projects) {
+  return (
+    <div className={typeBlockType}>
+      <div className={typeBlockTypeTitle}>{title}</div>
+      {
+        projects.map((project, i) => (
+          <Link key={i} to={project.id && `/project/${project.id}` || '#'}>
+            <div className={typeBlockTypeItem}>
+              <div className={typeBlockTypeItemTitle}>
+                {project.title}
+              </div>
+              <div className={typeBlockTypeItemCaption}>
+                {project.caption}
+              </div>
+              <div>
+                {project.tags.map((tag, i) => <span key={i} className={typeBlockTypeItemTag}>{tag}</span>)}
+              </div>
+            </div>
+          </Link>
+        ))
+      }
+    </div>
+  )
+}
+
 export default props => (
   <div className={cx(block, typeBlock)}>
-    {
-      Object.keys(projects).map(type => (
-        <div className={typeBlockType} key={type}>
-          <div className={typeBlockTypeTitle}>{type}</div>
-          {
-            projects[type].map((item, i) => (
-              <Link key={i} to={item.link || '#'}>
-                <div className={typeBlockTypeItem}>
-                  <div className={typeBlockTypeItemTitle}>
-                    {item.title}
-                  </div>
-                  <div className={typeBlockTypeItemCaption}>
-                    {item.caption}
-                  </div>
-                  <div>
-                    {item.tags.map((tag, i) => <span key={i} className={typeBlockTypeItemTag}>{tag}</span>)}
-                  </div>
-                </div>
-              </Link>
-            ))
-          }
-        </div>
-      ))
-    }
+    {renderCategory('website', projects.filter(project => project.type === 'website'))}
+    {renderCategory('game', projects.filter(project => project.type === 'game'))}
+    {renderCategory('other', projects.filter(project => project.type === 'other'))}
   </div>
 );
