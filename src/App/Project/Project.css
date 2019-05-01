@@ -19,10 +19,6 @@
   color: #fff;
 }
 
-.container {
-  
-}
-
 .inner-container {
   max-width: 1110px;
   min-height: 50vh;
@@ -41,8 +37,18 @@
   background: white;
 }
 
+.body a {
+  color: #3d638c;
+  font-weight: bold;
+}
+
 .body img {
   max-width: 100%;
+}
+
+body code {
+  background: rgba(0, 0, 0, 0.04);
+  font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
 
 .header {
@@ -51,6 +57,7 @@
 
 .title {
   font-size: 72px;
+  margin: 0;
 }
 
 .subtitle {

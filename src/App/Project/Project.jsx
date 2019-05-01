@@ -3,7 +3,7 @@ import {Link, Redirect} from 'react-router-dom';
 
 import Menu from '../Menu';
 
-import {navBar, container, innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, subtitle, dateAndType, tags, tag as tagCls} from './Project.css';
+import {navBar, innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, subtitle, dateAndType, tags, tag as tagCls} from './Project.css';
 
 import projects from './projects';
 
@@ -21,7 +21,7 @@ export default props => {
           <Link to="/">home</Link>
         </div>
       </nav>
-      <div className={container}>
+      <div>
         <div className={overview}>
           <div className={innerContainer}>
             <header className={header}>
