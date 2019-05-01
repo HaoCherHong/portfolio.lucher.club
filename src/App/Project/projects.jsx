@@ -24,7 +24,7 @@ export const dcard = {
 		'Mobile',
 		'React'
 	],
-	image: '/images/dcard_office.png',
+	cover: '/images/dcard_office.png',
 	time: 'Jul 2017 - Aug 2017',
 	features: [
 		'2 Months Intern Project',
@@ -40,7 +40,7 @@ export const pupy = {
 	type: 'website',
 	title: 'PUPY',
 	caption: 'Pet Adoption Platform',
-	image: '/images/pupy.png',
+	cover: '/images/pupy.png',
 	time: '2015 - 2016',
 	tags: [
 		'Full-Stack',
@@ -91,7 +91,7 @@ export const resonance = {
 	type: 'game',
 	title: 'Resonance',
 	caption: 'Original Action Music Game',
-	image: <YouTubeEmbed id="eIdtaOVQhOE"/>,
+	cover: <YouTubeEmbed id="eIdtaOVQhOE"/>,
 	time: '2017 - 2018',
 	tags: [
 		'Project-Manager',
@@ -125,7 +125,7 @@ export const sight = {
 		'Best Creativity Award winner',
 		'Original game design'
 	],
-	image: <YouTubeEmbed id='B56YjWi1ces'/>,
+	cover: <YouTubeEmbed id='B56YjWi1ces'/>,
 	body: sightBody
 };
 
@@ -134,7 +134,7 @@ export const bigSushi = {
 	type: 'game',
 	title: 'BigSushi',
 	caption: '2D Web Game Engine',
-	image: '/images/bigsushi.png',
+	cover: '/images/bigsushi.png',
 	time: 'Sep 2016 - Jan 2017',
 	tags: [
 		'Game-Engine',
@@ -153,7 +153,7 @@ export const escapeThePit = {
 	type: 'game',
 	title: 'Escape the Pit',
 	caption: '9th Place in Bahamut ACG Contest',
-	image: <YouTubeEmbed id='OX3PtkYmVZ8'/>,
+	cover: <YouTubeEmbed id='OX3PtkYmVZ8'/>,
 	time: 'Oct 2011 - Jan 2012',
 	tags: [
 		'3D-Modeling',
@@ -173,7 +173,7 @@ export const dreamLens = {
 	type: 'game',
 	title: 'DreamLens',
 	caption: 'Concept Game made in Hackathon',
-	image: <YouTubeEmbed id="C69kgCtb3xU"/>,
+	cover: <YouTubeEmbed id="C69kgCtb3xU"/>,
 	time: 'Jan 2014',
 	tags: [
 		'Hackathon',
@@ -193,7 +193,7 @@ export const ntutWin = {
 	type: 'other',
 	title: 'NTUTWin',
 	caption: '',
-	image: <YouTubeEmbed id="EkuzHjqSAj0"/>,
+	cover: <YouTubeEmbed id="EkuzHjqSAj0"/>,
 	time: '2015 - Present',
 	tags: [
 		'HTML-Parser',
@@ -212,7 +212,7 @@ export const wooTalkWindows = {
 	type: 'other',
 	title: 'WooTalk Windows Client',
 	caption: 'WebSocket Client',
-	image: '/images/wootalk-windows.jpeg',
+	cover: '/images/wootalk-windows.jpeg',
 	time: 'Sep 2016',
 	tags: [
 		'Web-Socket',
@@ -231,7 +231,7 @@ export const wooTrans = {
 	type: 'other',
 	title: 'WooTrans',
 	caption: 'WooTalk Session Manager',
-	image: '/images/wootrans.jpg',
+	cover: '/images/wootrans.jpg',
 	time: 'May 2015',
 	tags: [
 		'Chrome-Extension'
@@ -247,7 +247,7 @@ export const dpen = {
 	type: 'other',
 	title: 'Dpen',
 	caption: 'Open Dcard in Pop-Up',
-	image: '/images/dpen.jpg',
+	cover: '/images/dpen.jpg',
 	time: 'May 2015',
 	tags: [
 		'Chrome-Extension'
@@ -262,7 +262,7 @@ export const littleDino = {
 	type: 'other',
 	title: 'LittleDino',
 	caption: 'Hackathon Audience Choice Award',
-	image: '/images/littledino.png',
+	cover: '/images/littledino.png',
 	time: 'Jun 2015',
 	tags: [
 		'Hackathon'
@@ -279,7 +279,7 @@ export const stockTrading = {
 	type: 'other',
 	title: 'Stock Trading Stretagy Simulator',
 	caption: 'Web-Based Stock Trading Simulator',
-	image: <YouTubeEmbed id="bkC3WjGAuOA"/>,
+	cover: <YouTubeEmbed id="bkC3WjGAuOA"/>,
 	time: 'Sep 2016',
 	tags: [
 		'HTML-Parser',
@@ -294,7 +294,7 @@ export const proceduralModelGeneration = {
 	type: 'other',
 	title: 'Procedural Model Generation',
 	caption: 'Procedural Model Generating in Maya',
-	image: <YouTubeEmbed id="6EtqaFVH7pg"/>,
+	cover: <YouTubeEmbed id="6EtqaFVH7pg"/>,
 	tags: [
 		'3D-Modeling',
 		'Maya',

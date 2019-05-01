@@ -31,9 +31,11 @@
 .overview {
   background: #282828;
   color: white;
+  padding: 0 12px;
 }
 
 .body {
+  padding: 0 12px;
   background: white;
 }
 
@@ -60,16 +62,25 @@ body code {
   margin: 0;
 }
 
-.subtitle {
+.caption {
   background: #1b4572;
   color: #fff;
 }
 
+.cover-image {
+  width: 100%;
+  max-width: 560px;
+}
+
 .overview-info {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .overview-info-right {
+  flex: 1;
+  min-width: 330px;
   padding-left: 32px;
 }
 
@@ -102,4 +113,10 @@ body code {
   margin-right: 4px;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@media(max-width: 600px) {
+  .title {
+    font-size: 54px; 
+  }
 }

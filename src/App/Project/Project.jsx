@@ -3,7 +3,7 @@ import {Link, Redirect} from 'react-router-dom';
 
 import Menu from '../Menu';
 
-import {navBar, innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, subtitle, dateAndType, tags, tag as tagCls} from './Project.css';
+import {navBar, innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, caption, coverImage, dateAndType, tags, tag as tagCls} from './Project.css';
 
 import projects from './projects';
 
@@ -26,14 +26,14 @@ export default props => {
           <div className={innerContainer}>
             <header className={header}>
               <h1 className={title}>{project.title}</h1>
-              <h2 className={subtitle}>{project.caption}</h2>
+              <h2 className={caption}>{project.caption}</h2>
             </header>
             <div className={overviewInfo}>
               <div>
                 {
-                  typeof project.image === 'string' ? (
-                    <img width="560" src={project.image}/>
-                  ) : project.image
+                  typeof project.cover === 'string' ? (
+                    <img className={coverImage} src={project.cover}/>
+                  ) : project.cover
                 }
               </div>
               <div className={overviewInfoRight}>

@@ -47,12 +47,16 @@
   background: #282828;
   color: white;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   padding: 64px 32px;
 }
 
 .type-block-type {
   flex: 1;
   padding: 12px;
+  min-width: 330px;
+  max-width: 430px;
 }
 
 .type-block-type-title {
