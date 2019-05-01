@@ -27,7 +27,9 @@ export const dcard = {
 	time: '2017 July - August',
 	features: [
 		'2 Months Intern Project',
-		'Frontend Developer'
+		'Frontend Developer',
+		'Bundle Size Optimize',
+		'Mobile Devices Compatibility'
 	],
 	body: dcardBody
 };
