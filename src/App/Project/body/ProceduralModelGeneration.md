@@ -3,4 +3,4 @@ The goal of this project is to make a program that generate models with any musi
 ![](/images/image31.png)
 
 The first approach of audio virtualization
-<iframe width="560" height="315" src="https://www.youtube.com/embed/IG7YbZ7mZO4 " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/IG7YbZ7mZO4 " frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

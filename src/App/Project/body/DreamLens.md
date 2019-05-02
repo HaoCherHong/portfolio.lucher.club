@@ -13,4 +13,4 @@ The idea is that we have a camera and different kinds of lens, when the camera s
 ![](/images/image17.png)
 
 Another way to pass the demo:
-<iframe width="560" height="315" src="https://www.youtube.com/embed/_RX6zczS-sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe class="youtube" src="https://www.youtube.com/embed/_RX6zczS-sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

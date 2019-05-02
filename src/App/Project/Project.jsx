@@ -16,44 +16,40 @@ export default props => {
 
   return (
     <div>
-      <nav className={navBar}>
-        <div>
+      <div className={overview}>
+        <nav className={navBar}>
           <Link to="/">home</Link>
-        </div>
-      </nav>
-      <div>
-        <div className={overview}>
-          <div className={innerContainer}>
-            <header className={header}>
-              <h1 className={title}>{project.title}</h1>
-              <h2 className={caption}>{project.caption}</h2>
-            </header>
-            <div className={overviewInfo}>
-              <div>
+        </nav>
+        <div className={innerContainer}>
+          <header className={header}>
+            <h1 className={title}>{project.title}</h1>
+            <h2 className={caption}>{project.caption}</h2>
+          </header>
+          <div className={overviewInfo}>
+            <div>
+              {
+                typeof project.cover === 'string' ? (
+                  <img className={coverImage} src={project.cover}/>
+                ) : project.cover
+              }
+            </div>
+            <div className={overviewInfoRight}>
+              <div className={dateAndType}>{project.type}．{project.time}</div>
+              <div className={tags}>{project.tags.map((tag, i) => <span key={i} className={tagCls}>{tag}</span>)}</div>
+              <ul className={featureList}>
                 {
-                  typeof project.cover === 'string' ? (
-                    <img className={coverImage} src={project.cover}/>
-                  ) : project.cover
+                  project.features && project.features.map((feature, i) => (
+                    <li key={i}>{feature}</li>
+                  ))
                 }
-              </div>
-              <div className={overviewInfoRight}>
-                <div className={dateAndType}>{project.type}．{project.time}</div>
-                <div className={tags}>{project.tags.map((tag, i) => <span key={i} className={tagCls}>{tag}</span>)}</div>
-                <ul className={featureList}>
-                  {
-                    project.features && project.features.map((feature, i) => (
-                      <li key={i}>{feature}</li>
-                    ))
-                  }
-                </ul>
-              </div>
+              </ul>
             </div>
           </div>
         </div>
-        <div className={body}>
-          <div className={innerContainer}>
-            <div dangerouslySetInnerHTML={{__html: project.body}}/>
-          </div>
+      </div>
+      <div className={body}>
+        <div className={innerContainer}>
+          <div dangerouslySetInnerHTML={{__html: project.body}}/>
         </div>
       </div>
       <Menu/>

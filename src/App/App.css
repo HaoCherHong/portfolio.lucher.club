@@ -16,16 +16,18 @@
 
 .landing-block-rect-top {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .landing-block-rect-left {
   padding: 24px;
   flex: 1;
+  text-align: center;
 }
 
 .landing-block-rect-right {
   padding: 24px;
-  flex: 1;
   font-size: 50px;
   letter-spacing: 0.1em;
   font-weight: 500;
