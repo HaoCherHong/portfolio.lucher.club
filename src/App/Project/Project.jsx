@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link, Redirect} from 'react-router-dom';
+import {Helmet} from "react-helmet";
 
 import Menu from '../Menu';
 
@@ -16,6 +17,9 @@ export default props => {
 
   return (
     <div>
+      <Helmet>
+        <title>{`${project.title} - Portfolio - Hao-Cher Hong`}</title>
+      </Helmet>
       <div className={overview}>
         <nav className={navBar}>
           <Link to="/">home</Link>

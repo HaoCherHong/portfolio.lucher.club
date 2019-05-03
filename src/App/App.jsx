@@ -1,6 +1,7 @@
 import React from "react";
 import { hot } from 'react-hot-loader/root'
-import { BrowserRouter, Switch, Route, Redirect, withRouter } from "react-router-dom";
+import { BrowserRouter, Switch, Route, withRouter } from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 import Home from './Home';
 import Project from "./Project/Project";
@@ -16,6 +17,9 @@ class App extends React.PureComponent {
   render() {
     return (
       <div>
+        <Helmet>
+          <title>Portfolio - Hao-Cher Hong</title>
+        </Helmet>
         <Switch>
           <Route path="/" exact component={Home}/>
           <Route path="/project/:projectId" component={Project}/>
