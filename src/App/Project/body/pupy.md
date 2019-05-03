@@ -4,12 +4,10 @@ PUPY is an pet adoption platform developed and design by my designer friend and 
 
 # Techniques
 
-- Backend
-  -	Node
-  -	Express.js
-  -	MongoDB
-- FrontEnd
-  -	Angular JS
+-	Node.js
+-	Express.js
+-	MongoDB
+-	Angular JS
 
 # Screenshots
 

@@ -2,6 +2,9 @@ import React from 'react';
 
 import dcardBody from './body/Dcard.md';
 import pupyBody from './body/Pupy.md';
+import decardBody from './body/DeCard.md';
+import makerMoocsBody from './body/MakerMoocs.md';
+import ccbcBody from './body/CCBC.md';
 import resonanceBody from './body/Resonance.md';
 import sightBody from './body/Sight.md';
 import bigSushiBody from './body/BigSushi.md';
@@ -57,37 +60,64 @@ export const pupy = {
 };
 
 export const decard = {
+	id: 'de-card',
 	type: 'website',
 	title: 'De-Card',
 	caption: 'Secret Messaging Service',
+	cover: '/images/decard.png',
+	time: 'Jan 2019',
 	tags: [
 		'Service',
 		'Full-Stack',
 		'FB App',
 		'React'
-	]
+	],
+	features: [
+		'Messaging Service',
+		'Facebook App',
+		'Full-Stack Development'
+	],
+	body: decardBody
 };
 
 export const makerMoocs = {
+	id: 'ntnu-maker-moocs',
 	type: 'website',
 	title: 'NTNU Maker MOOCs',
 	caption: 'Maker Skills Self-Learning Platform',
+	cover: '/images/maker-moocs.jpg',
+	time: '2016 - 2018',
 	tags: [
 		'Full-Stack',
 		'React'
-	]
+	],
+	features: [
+		'Content Management System',
+		'i18n Support',
+		'WYSIWYG Editor'
+	],
+	body: makerMoocsBody
 };
 
 export const ccbc = {
+	id: 'ccbc',
 	type: 'website',
 	title: 'CCBC',
-	caption: 'Facebook Anonymous Page Service',
+	caption: 'Facebook Anonymous Posts Service',
+	cover: '/images/ccbc.png',
+	time: 'Nov 2016 - Jan 2017',
 	tags: [
 		'Service',
 		'Full-Stack',
 		'FB App',
 		'React'
-	]
+	],
+	features: [
+		'Facebook Anonymous Posts Service',
+		'Facebook App',
+		'Full-Stack Development'
+	],
+	body: ccbcBody
 };
 
 export const resonance = {
