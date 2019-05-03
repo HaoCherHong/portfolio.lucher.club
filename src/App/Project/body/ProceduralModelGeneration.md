@@ -1,8 +1,8 @@
 # Introduction
 
-The goal of this project is to develop a method to generate models by simply provides a music (or sound waves) as parameter. I used Autodesk Maya and its Python scripting interface to accomplish the model generating process. Before generating, we use a Node.js script to analyze and reshape the sound wave to make it able to be processed on Maya.
+The goal of this project is to develop a method to generate models by simply providing a music (or sound waves) as parameter to the script. I used Autodesk Maya and its Python scripting interface to accomplish the model generating process. Before generating, I use a Node.js script to analyze and reshape the sound wave to make it able to be processed on Maya.
 
-![](/images/image31.png)
+![A procedural generated model](/images/image31.png)
 
 Here is an early approach, mapping sound wave frequencies to a height map and use shaders to map the height map onto model surfaces.
 

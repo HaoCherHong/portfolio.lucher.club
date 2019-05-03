@@ -1,6 +1,6 @@
 # Dpen
 
-Dpen is a chrome extension button thats pop-ups a little window to open you your Dcard today.
+Dpen is a Chrome extension button thats pop-ups a little window to open your Dcard.
 
 ![](/images/dpen.jpg)
 

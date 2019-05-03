@@ -325,6 +325,10 @@ export const stockTrading = {
 		'Crawler',
 		'React'
 	],
+	features: [
+		'Web Crawler',
+		'HTML Parser'
+	],
 	body: stockTradingBody
 };
 
