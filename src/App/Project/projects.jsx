@@ -10,6 +10,8 @@ import escapeThePitBody from './body/EscapeThePit.md';
 import littleDinoBody from './body/LittleDino.md';
 import wooTalkWindowsBody from './body/WooTalkWindows.md';
 import ntutWinBody from './body/NTUTWin.md';
+import wooTransBody from './body/WooTrans.md';
+import dpenBody from './body/Dpen.md';
 import stockTradingBody from './body/StockTrading.md';
 import proceduralModelGenerationBody from './body/ProceduralModelGeneration.md';
 
@@ -59,6 +61,7 @@ export const decard = {
 	title: 'De-Card',
 	caption: 'Secret Messaging Service',
 	tags: [
+		'Service',
 		'Full-Stack',
 		'FB App',
 		'React'
@@ -80,6 +83,7 @@ export const ccbc = {
 	title: 'CCBC',
 	caption: 'Facebook Anonymous Page Service',
 	tags: [
+		'Service',
 		'Full-Stack',
 		'FB App',
 		'React'
@@ -101,6 +105,7 @@ export const resonance = {
 	features: [
 		'Leader of 5 people team',
 		'Project Manager',
+		'Lead Developer',
 		'Original game design',
 		'Script System'
 	],
@@ -114,6 +119,7 @@ export const sight = {
 	id: 'sight',
 	tags: [
 		'Project-Manager',
+		'Lead Developer',
 		'Game-Design',
 		'Unity'
 	],
@@ -192,7 +198,7 @@ export const ntutWin = {
 	id: 'ntutwin',
 	type: 'other',
 	title: 'NTUTWin',
-	caption: '',
+	caption: 'Friendly Interface for School Online Services',
 	cover: <YouTubeEmbed id="EkuzHjqSAj0"/>,
 	time: '2015 - Present',
 	tags: [
@@ -220,8 +226,8 @@ export const wooTalkWindows = {
 	],
 	features: [
 		'Windows Store App',
-		'10k+ Installs',
-		'WebSocket Client'
+		'WebSocket Client',
+		'10k+ Installs'
 	],
 	body: wooTalkWindowsBody
 };
@@ -231,7 +237,7 @@ export const wooTrans = {
 	type: 'other',
 	title: 'WooTrans',
 	caption: 'WooTalk Session Manager',
-	cover: '/images/wootrans.jpg',
+	cover: '/images/wootrans.png',
 	time: 'May 2015',
 	tags: [
 		'Chrome-Extension'
@@ -239,7 +245,8 @@ export const wooTrans = {
 	features: [
 		'Google Chrome Extension',
 		'Web Session Manager'
-	]
+	],
+	body: wooTransBody
 };
 
 export const dpen = {
@@ -247,14 +254,16 @@ export const dpen = {
 	type: 'other',
 	title: 'Dpen',
 	caption: 'Open Dcard in Pop-Up',
-	cover: '/images/dpen.jpg',
+	cover: '/images/dpen.png',
 	time: 'May 2015',
 	tags: [
 		'Chrome-Extension'
 	],
 	features: [
-		'Google Chrome Extension'
-	]
+		'Google Chrome Extension',
+		'Dcard API'
+	],
+	body: dpenBody
 };
 
 export const littleDino = {
@@ -268,7 +277,7 @@ export const littleDino = {
 		'Hackathon'
 	],
 	features: [
-		'Hackathon Audience Choice Award',
+		'Audience Choice Award Winner',
 		'8th Hackathon Taiwan'
 	],
 	body: littleDinoBody
@@ -295,10 +304,17 @@ export const proceduralModelGeneration = {
 	title: 'Procedural Model Generation',
 	caption: 'Procedural Model Generating in Maya',
 	cover: <YouTubeEmbed id="6EtqaFVH7pg"/>,
+	time: 'Sep 2016',
 	tags: [
 		'3D-Modeling',
 		'Maya',
 		'Python'
+	],
+	features: [
+		'Procedural Generation',
+		'3D Modeling',
+		'Autodesk Maya',
+		'Signal Processing'
 	],
 	body: proceduralModelGenerationBody
 };

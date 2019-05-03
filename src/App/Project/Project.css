@@ -98,6 +98,7 @@ body code {
   font-weight: 500;
   margin: 16px 0 0 0;
   padding: 0;
+  list-style: none;
 }
 
 .feature-list li {

@@ -13,11 +13,10 @@ PUPY is an pet adoption platform developed and design by my designer friend and 
 
 # Screenshots
 
-Search and filters:
+Search and filters
 ![Search and filters](/images/image22.png)
 
-Profile and notification settings:
+Profile and notification settings
 ![Profile and notification settings](/images/image23.png)
-
 
 ![](/images/image24.png)

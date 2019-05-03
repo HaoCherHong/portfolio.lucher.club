@@ -1,19 +1,30 @@
-# Techniques:
-- Unity
-  - ShaderLanguage
-  - Performance Enhancement Techniques 
-  - Custom Editor
+# Introduction
 
-<br/>
+"SIGHT." is my project for a game design course in the college. In the semester, we, 4 other team members and I as lead developer and project manager, had to design and develop a game and attend a game making contest. The character have a special ability, "SIGHT.", that enables him to "see" the sight of monitor cameras. "SIGHT." is a first-person stealth game, player have to use his special ability to trick monitor cameras and steal the objectives.
 
-# Introduction:
-
-SIGHT. 是我在上學期的遊戲設計課程與組員完成的作品。為了呈現主角可以看見監視器 視線的特殊能力，我們設計了大量的特效 Shader 來做出視覺風格強烈的遊戲畫面。
-由於這款遊戲關卡設計的地位非常重要，我們也做了許多自訂的 Editor 來編輯關卡，例如:視線 預覽、拿取物品手勢的設定編輯等。
-SIGHT. 是一款第一人稱的潛行遊戲，你必須透過使用特殊能力”SIGHT.”來”看到”監 視器的視線，並利用各種方式欺騙監視器的角度，帶走目標物品。
+In order to make the visual effects for "SIGHT.", we had to design and implement a lot of shaders to create the amazing game graphics. Since the stage design is important to this game, we also made custom editors to create our stages. For example, we have editors for previewing camera sights, previewing character's holding gestures, etc.
 
 ![](/images/image5.png)
+
+# Techniques
+
+- Unity
+- Unity Custom Editor
+- Shader Language
+- 3D Game Performance Enhancement Techniques 
+
+# Screenshots
+  
 ![](/images/image6.png)
+
+You can block cameras' sight by moving objects in the scene to create obstacles.
+
 ![](/images/image7.png)
+
+The object to retrieve
+
 ![](/images/image8.jpeg)
-![](/images/image9.jpeg)
+
+A mobile monitor camera
+
+![A mobile monitor camera](/images/image9.jpeg)
