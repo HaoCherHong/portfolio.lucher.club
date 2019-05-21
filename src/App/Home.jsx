@@ -22,7 +22,7 @@ export default props => (
       <div className={landingBlockRect}>
         <div className={landingBlockRectTop}>
           <div className={landingBlockRectLeft}>
-            <img src="/portrait.jpg" alt="Portrait of Hao-Cher Hong"/>  
+            <img src="/images/portrait.jpg" alt="Portrait of Hao-Cher Hong"/>  
           </div>
           <div className={landingBlockRectRight}>
             <div>Hao-<br/>Cher<br/>Hong</div>
