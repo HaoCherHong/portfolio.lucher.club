@@ -42,13 +42,17 @@
 }
 
 .landing-block-rect-bottom {
-  color: #ddd;
+  color: rgba(255, 255, 255, 0.9);
   padding: 0 24px 24px 24px;
   text-align: center;
 }
 
+.landing-block-rect:hover .landing-block-rect-bottom {
+  animation: none !important;
+}
+
 .down-arrow svg {
-  fill: #fff;
+  fill: rgba(255, 255, 255, 0.9);;
   height: 32px;
   margin: 12px;
 }
@@ -110,12 +114,12 @@
 
 @keyframes breath {
   0% {
-    opacity: 0.5;
-  }
-  50% {
     opacity: 1.0;
   }
-  100% {
+  50% {
     opacity: 0.5;
+  }
+  100% {
+    opacity: 1.0;
   }
 }

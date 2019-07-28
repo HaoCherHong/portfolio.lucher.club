@@ -35,11 +35,12 @@ export default props => (
             <div>Hao-<br/>Cher<br/>Hong</div>
           </div>
         </div>
-        <div className={landingBlockRectBottom}>
+        <div
+          className={landingBlockRectBottom}
+          style={{animation: `2s infinite ease-in-out ${breath}`}}>
           Works and Projects<br/>
           <span
             className={downArrow}
-            style={{animation: `2s infinite ease-in-out ${breath}`}}
             dangerouslySetInnerHTML={{__html: downArrowSvg}}/>
         </div>
       </div>
