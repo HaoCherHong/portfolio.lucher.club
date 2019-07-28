@@ -11,14 +11,21 @@ import {
   landingBlockRectLeft,
   landingBlockRectRight,
   landingBlockRectBottom,
-  downArrow
+  downArrow,
+  breath
 } from './App.css';
 
-import Menu from './Menu';
+const moveToMenu = () => {
+  const menu = document.getElementById('menu');
+  window.scrollTo({
+    top: menu.offsetTop,
+    behavior: 'smooth'
+  });
+}
 
 export default props => (
   <div>
-    <div className={cx(block, landingBlock)}>
+    <div className={cx(block, landingBlock)} onClick={moveToMenu}>
       <div className={landingBlockRect}>
         <div className={landingBlockRectTop}>
           <div className={landingBlockRectLeft}>
@@ -30,10 +37,12 @@ export default props => (
         </div>
         <div className={landingBlockRectBottom}>
           Works and Projects<br/>
-          <span className={downArrow} dangerouslySetInnerHTML={{__html: downArrowSvg}}/>
+          <span
+            className={downArrow}
+            style={{animation: `2s infinite ease-in-out ${breath}`}}
+            dangerouslySetInnerHTML={{__html: downArrowSvg}}/>
         </div>
       </div>
     </div>
-    <Menu/>
   </div>
 );

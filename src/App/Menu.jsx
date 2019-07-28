@@ -41,7 +41,7 @@ function renderCategory(title, projects) {
 }
 
 export default props => (
-  <div className={cx(block, typeBlock)}>
+  <div id="menu" className={cx(block, typeBlock)}>
     {renderCategory('website', projects.filter(project => project.type === 'website'))}
     {renderCategory('game', projects.filter(project => project.type === 'game'))}
     {renderCategory('other', projects.filter(project => project.type === 'other'))}

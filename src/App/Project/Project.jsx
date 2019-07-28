@@ -1,10 +1,8 @@
 import React from 'react';
-import {Link, Redirect} from 'react-router-dom';
+import {Redirect} from 'react-router-dom';
 import {Helmet} from "react-helmet";
 
-import Menu from '../Menu';
-
-import {navBar, innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, caption, coverImage, dateAndType, tags, tag as tagCls} from './Project.css';
+import {innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, caption, coverImage, dateAndType, tags, tag as tagCls} from './Project.css';
 
 import projects from './projects';
 
@@ -21,9 +19,6 @@ export default props => {
         <title>{`${project.title} - Portfolio - Hao-Cher Hong`}</title>
       </Helmet>
       <div className={overview}>
-        <nav className={navBar}>
-          <Link to="/">home</Link>
-        </nav>
         <div className={innerContainer}>
           <header className={header}>
             <h1 className={title}>{project.title}</h1>
@@ -56,7 +51,6 @@ export default props => {
           <div dangerouslySetInnerHTML={{__html: project.body}}/>
         </div>
       </div>
-      <Menu/>
     </div>
   )
 };

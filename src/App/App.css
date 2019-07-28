@@ -11,7 +11,14 @@
 }
 
 .landing-block-rect {
-  border: 2px solid white;
+  border: 2px solid;
+  border-color: #ccc;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+
+.landing-block-rect:hover {
+  border-color: #fff;
 }
 
 .landing-block-rect-top {
@@ -35,12 +42,13 @@
 }
 
 .landing-block-rect-bottom {
+  color: #ddd;
   padding: 0 24px 24px 24px;
   text-align: center;
 }
 
 .down-arrow svg {
-  fill: white;
+  fill: #fff;
   height: 32px;
   margin: 12px;
 }
@@ -98,4 +106,16 @@
   margin-right: 4px;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes breath {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1.0;
+  }
+  100% {
+    opacity: 0.5;
+  }
 }

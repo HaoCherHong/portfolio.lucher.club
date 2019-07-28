@@ -5,6 +5,8 @@ import {Helmet} from "react-helmet";
 
 import Home from './Home';
 import Project from "./Project/Project";
+import Menu from './Menu';
+import Footer from './Footer';
 
 @withRouter
 class App extends React.PureComponent {
@@ -24,6 +26,8 @@ class App extends React.PureComponent {
           <Route path="/" exact component={Home}/>
           <Route path="/project/:projectId" component={Project}/>
         </Switch>
+        <Menu/>
+        <Footer/>
       </div>
     );
   }

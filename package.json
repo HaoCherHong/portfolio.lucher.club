@@ -6,8 +6,8 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node server",
-    "start": "cross-env NODE_ENV=production node server",
+    "dev": "cross-env NODE_ENV=development node server | bunyan",
+    "start": "cross-env NODE_ENV=production node server | bunyan",
     "build": "cross-env NODE_ENV=production webpack",
     "profile": "cross-env NODE_ENV=production webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json -m static -r stats.html -O"
   },
