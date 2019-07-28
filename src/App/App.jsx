@@ -12,10 +12,7 @@ import Footer from './Footer';
 class App extends React.PureComponent {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.location.pathname !== this.props.location.pathname) {
-      window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-      });
+      window.scrollTo(0, 0);
     }
   }
 
