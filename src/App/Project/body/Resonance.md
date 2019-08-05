@@ -1,3 +1,7 @@
+# Demo
+
+[Download for Windows](https://drive.google.com/open?id=1ALnooPdrjy7rX6sGmO9IxMNnPfxvmjmD)
+
 # Resonance
 
 Resonance is my graduation project in my college. As the leader of a 5 members team, consists of 2D artists, music composer and developers, I managed to schedule, manage and execute the project for 3 semesters. After 3 months of brainstorming game ideas, we decided to make this **Music-Action game**, combining action game and music game, which is never seen before.

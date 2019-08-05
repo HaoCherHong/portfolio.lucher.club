@@ -1,4 +1,8 @@
-# Introduction
+# Demo
+
+[Download for Windows](https://drive.google.com/open?id=1bPTq9MQOtUaBFpq7MIxoTDah25_7aAHI)
+
+# SIGHT
 
 "SIGHT." is my project for a game design course in the college. In the semester, we, 4 other team members and I as lead developer and project manager, had to design and develop a game and attend a game making contest. The character have a special ability, "SIGHT.", that enables him to "see" the sight of monitor cameras. "SIGHT." is a first-person stealth game, player have to use his special ability to trick monitor cameras and steal the objectives.
 
