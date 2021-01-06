@@ -8,6 +8,8 @@ import Project from "./Project/Project";
 import Menu from './Menu';
 import Footer from './Footer';
 
+import '../styles.css';
+
 @withRouter
 class App extends React.PureComponent {
   componentDidUpdate(prevProps, prevState) {
@@ -34,4 +36,4 @@ class App extends React.PureComponent {
 }
 
 
-export default hot(props => <BrowserRouter><App/></BrowserRouter>);
+export default hot(App);

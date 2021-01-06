@@ -6,22 +6,27 @@
   "license": "ISC",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development node server | bunyan",
-    "start": "cross-env NODE_ENV=production node server | bunyan",
-    "build": "cross-env NODE_ENV=production webpack",
-    "profile": "cross-env NODE_ENV=production webpack --profile --json > stats.json && webpack-bundle-analyzer stats.json -m static -r stats.html -O"
+    "dev": "cross-env NODE_ENV=development babel-node server | bunyan",
+    "start": "cross-env NODE_ENV=production babel-node server | bunyan",
+    "build:client": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.client.js",
+    "build:ssr": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.ssr.js",
+    "build": "rm -rf ./dist && npm run build:client && npm run build:ssr",
+    "profile": "cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.client.js --profile --json > stats.json && webpack-bundle-analyzer stats.json -m static -r stats.html -O"
   },
   "sideEffects": [
     "*.css"
   ],
   "devDependencies": {
-    "@babel/core": "^7.2.2",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
     "@babel/plugin-proposal-class-properties": "^7.3.0",
     "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.12.1",
     "@babel/preset-env": "^7.3.1",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "babel-plugin-css-modules-transform": "^1.6.2",
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.0",
@@ -39,7 +44,8 @@
     "webpack-dev-middleware": "^3.5.1",
     "webpack-dev-server": "^3.1.14",
     "webpack-hot-middleware": "^2.24.3",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "^4.2.1",
+    "webpack-stats-plugin": "^1.0.3"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -47,6 +53,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "require-from-string": "^2.0.2"
   }
 }
