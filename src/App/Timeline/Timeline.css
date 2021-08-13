@@ -1,0 +1,144 @@
+.timeline-block {
+  background: #282828;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 256px 0;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  max-width: 900px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.entry {
+  display: flex;
+  flex-direction: row;
+  width: 900px;
+  position: relative;
+}
+
+.entry-container:nth-child(odd) .entry {
+  flex-direction: row-reverse;
+}
+
+.label {
+  margin: 0 32px;
+  flex: 1;
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entry-container:nth-child(even) .label {
+  align-items: flex-end;
+}
+
+.info {
+  max-width: 300px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 0 32px;
+  filter: blur(0) saturate(1);
+  transition: filter, transform 0.5s;
+  will-change: filter, transform;
+}
+
+.info-image {
+  width: 100%;
+  box-shadow: 0 8px 8px 0 rgb(0, 0, 0, 0.3);
+}
+
+.info-body {
+  color: #ccc;
+}
+
+.active {
+
+}
+
+.inactive {
+
+}
+
+.inactive .info {
+  filter: blur(4px) saturate(0);
+  transform: translate3d(-150px, 0, -400px) rotateY(30deg);
+}
+
+.inactive .info-image {
+  box-shadow: none;
+}
+
+.inactive.entry-container:nth-child(even) .info {
+  transform: translate3d(150px, 0, -400px) rotateY(-30deg);
+}
+
+.entry-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  padding: 32px 0;
+  margin: 0 0 128px 0;
+}
+
+.entry-container.active {
+  z-index: 1;
+}
+
+.entry-background {
+  background-color: #111;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transition: left 0.25s, right 0.25s, top 0.25s 0.25s, bottom 0.25s, opacity 0.5s;
+}
+
+.inactive .entry-background {
+  opacity: 0;
+  top: 95%;
+  /* bottom: 100%; */
+}
+
+.inactive.entry-container:nth-child(even) .entry-background {
+  right: 100%;
+}
+
+.inactive.entry-container:nth-child(odd) .entry-background {
+  left: 100%;
+}
+
+.entry::after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  left: calc(100% - 364px);
+  top: 50%;
+  border: 4px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  transition: background-color 0.25s, width 0.25s, height 0.25s;
+}
+
+.entry-container:nth-child(odd) .entry::after {
+  left: 364px;
+}
+
+.active.entry-container .entry::after {
+  background: white;
+  border: 4px solid white;
+  width: 20px;
+  height: 20px;
+}

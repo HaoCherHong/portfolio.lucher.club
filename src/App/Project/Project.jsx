@@ -1,10 +1,57 @@
 import React from 'react';
-import {Redirect} from 'react-router-dom';
-import {Helmet} from "react-helmet";
+import {
+  Redirect,
+  Link,
+} from 'react-router-dom';
+import { Helmet } from "react-helmet";
 
-import {innerContainer, overview, overviewInfo, overviewInfoRight, featureList, body, header, title, caption, coverImage, dateAndType, tags, tag as tagCls} from './Project.css';
+import {
+  innerContainer,
+  overview,
+  overviewInfo,
+  overviewInfoRight,
+  featureList,
+  body,
+  header,
+  title,
+  caption,
+  coverImage,
+  dateAndType,
+  tags,
+  tag as tagCls,
+  breadcrumbContainer,
+  breadcrumbEntry,
+  breadcrumbEntryActive,
+  breadcrumbSplitter,
+} from './Project.css';
 
 import projects from './projects';
+
+const Breadcrumb = (props) => {
+  return (
+    <nav className={breadcrumbContainer}>
+      <Link to={'/'} className={breadcrumbEntry}>
+        Home
+      </Link>
+      <span className={breadcrumbSplitter}>{'>'}</span>
+      <Link
+        to={{
+          pathname: '/',
+          hash: '#menu'
+        }}
+        className={breadcrumbEntry}
+      >
+        Menu
+      </Link>
+      <span className={breadcrumbSplitter}>{'>'}</span>
+      <Link
+        to={`/project/${props.id}`}
+        className={`${breadcrumbEntry} ${breadcrumbEntryActive}`}
+      >
+      {props.title}</Link>
+    </nav>
+  );
+}
 
 export default props => {
   const {projectId} = props.match.params;
@@ -21,6 +68,7 @@ export default props => {
       <div className={overview}>
         <div className={innerContainer}>
           <header className={header}>
+            <Breadcrumb id={project.id} title={project.title} />
             <h1 className={title}>{project.title}</h1>
             <h2 className={caption}>{project.caption}</h2>
           </header>

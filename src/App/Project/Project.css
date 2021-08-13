@@ -112,3 +112,23 @@ body code {
     font-size: 54px; 
   }
 }
+
+.breadcrumb-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.breadcrumb-entry {
+  color: #ffffff;
+  opacity: 0.5;
+}
+
+.breadcrumb-entry:hover, .breadcrumb-entry-active {
+  opacity: 1;
+}
+
+.breadcrumb-splitter {
+  color: #666666;
+  display: block;
+  margin: 0 12px;
+}

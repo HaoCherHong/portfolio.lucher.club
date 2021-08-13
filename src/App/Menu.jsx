@@ -18,6 +18,7 @@ import {
 function renderCategory(title, projects) {
   return (
     <div className={typeBlockType}>
+      <a name="menu"></a>
       <div className={typeBlockTypeTitle}>{title}</div>
       {
         projects.map((project, i) => (

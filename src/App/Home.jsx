@@ -1,7 +1,9 @@
 import React from 'react';
-import cx from "classnames";
+import cx from 'classnames';
 
 import downArrowSvg from './angle-arrow-down.svg';
+
+import Timeline from './Timeline/'
 
 import {
   block,
@@ -16,7 +18,7 @@ import {
 
 const moveToMenu = () => {
   const menu = document.getElementById('menu');
-  window.scrollTo({
+  document.body.scrollTo({
     top: menu.offsetTop,
     behavior: 'smooth'
   });
@@ -42,5 +44,6 @@ export default props => (
         </div>
       </div>
     </div>
+    <Timeline/>
   </div>
 );

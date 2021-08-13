@@ -14,7 +14,7 @@ import '../styles.css';
 class App extends React.PureComponent {
   componentDidUpdate(prevProps, prevState) {
     if (prevProps.location.pathname !== this.props.location.pathname) {
-      window.scrollTo(0, 0);
+      document.body.scrollTo(0, 0);
     }
   }
 
