@@ -12,7 +12,6 @@ import {
   landingBlockRectRight,
   landingBlockRectBottom,
   downArrow,
-  breath
 } from './App.css';
 
 const moveToMenu = () => {
@@ -35,9 +34,7 @@ export default props => (
             <div>Hao-<br/>Cher<br/>Hong</div>
           </div>
         </div>
-        <div
-          className={landingBlockRectBottom}
-          style={{animation: `2s infinite ease-in-out ${breath}`}}>
+        <div className={landingBlockRectBottom}>
           Works and Projects<br/>
           <span
             className={downArrow}
