@@ -15,6 +15,7 @@ import {
   inactive as inactiveCls,
   entryContainer,
   entryBackground,
+  canvas as canvasCls,
 } from './Timeline.css';
 
 const entries = [
@@ -39,6 +40,8 @@ const entries = [
     bgUrl: '/images/image18.png',
   },
 ]
+
+const interleave = (arr, thing) => [].concat(...arr.map(n => [n, thing])).slice(0, -1)
 
 const Timeline = () => {
   /** @type {React.MutableRefObject<HTMLElement>} */
@@ -97,7 +100,9 @@ const Timeline = () => {
         }}>
       </div>
       {
-        entries.map((entry, index) => <Entry entry={entry} isActive={activeId === entry.id} setActiveId={setActiveId} />)
+        entries.map((entry, index) => (
+          <Entry key={entry.id} entry={entry} isActive={activeId === entry.id} setActiveId={setActiveId} />
+        ))
       }
     </div>
   );
@@ -105,7 +110,11 @@ const Timeline = () => {
 
 const Entry = ({entry, isActive, setActiveId}) => {
   /** @type {React.MutableRefObject<HTMLElement>} */
+  const containerRef = useRef();
+  /** @type {React.MutableRefObject<HTMLElement>} */
   const entryRef = useRef();
+  /** @type {React.MutableRefObject<HTMLCanvasElement>} */
+  const canvasRef = useRef();
 
   useEffect(() => {
     const callback = throttle(
@@ -127,12 +136,21 @@ const Entry = ({entry, isActive, setActiveId}) => {
     }
   }, []);
 
+  useEffect(() => {
+    if (canvasRef.current) {
+      drawCanvas(canvasRef.current, entry.id);
+    }
+  }, [canvasRef.current]);
+
   return (
-    <div className={cx({
-      [entryContainer]: true,
-      [activeCls]: isActive,
-      [inactiveCls]: !isActive,
-    })}>
+    <div
+      ref={containerRef}
+      className={cx({
+        [entryContainer]: true,
+        [activeCls]: isActive,
+        [inactiveCls]: !isActive,
+      })}
+    >
       <div className={entryBackground}></div>
       <div ref={entryRef} className={cx({
           [entryCls]: true,
@@ -149,8 +167,97 @@ const Entry = ({entry, isActive, setActiveId}) => {
           </p>
         </div>
       </div>
+      {
+        containerRef.current && (
+          <canvas
+            ref={canvasRef}
+            className={canvasCls}
+            style={{
+              position: 'absolute',
+              top: '0',
+            }}
+            width={entryRef.current.clientWidth}
+            height={containerRef.current.clientHeight}
+          />
+        )
+      }
     </div>
   );
+}
+
+/**
+ * 
+ * @param {HTMLCanvasElement} canvas
+ */
+const drawCanvas = (canvas, index) => {
+  const ctx = canvas.getContext('2d');
+  const circleSize = 16;
+  const isOdd = index % 2 !== 0;
+  const circleX = isOdd ? canvas.width - 364 : 364;
+  const circleX2 = !isOdd ? canvas.width - 364 : 364;
+
+  const p1 = index === 0 ? {
+    x: canvas.width / 2,
+    y: 0
+  } : {
+    x: circleX2,
+    y: -canvas.height / 2,
+  };
+  const p2 = {
+    x: circleX,
+    y: canvas.height / 2
+  };
+  const p3 = index === entries.length - 1 ? {
+    x: canvas.width / 2,
+    y: canvas.height,
+  } : {
+    x: circleX2,
+    y: canvas.height * 1.5,
+  };
+  const cp1 = {
+    x: p1.x,
+    y: (p1.y + p2.y) / 2,
+  }
+  const cp2 = {
+    x: p2.x,
+    y: (p1.y + p2.y) / 2,
+  };
+  const cp3 = {
+    x: p2.x,
+    y: (p2.y + p3.y) / 2,
+  }
+  const cp4 = {
+    x: p3.x,
+    y: (p2.y + p3.y) / 2,
+  };
+
+  const gradient = ctx.createLinearGradient(0, 0, 0, canvas.height);
+  
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.5)';
+  ctx.lineWidth = 2;
+  ctx.beginPath();
+  ctx.moveTo(p1.x, p1.y);
+  ctx.bezierCurveTo(cp1.x, cp1.y, cp2.x, cp2.y, p2.x, p2.y);
+  ctx.bezierCurveTo(cp3.x, cp3.y, cp4.x, cp4.y, p3.x, p3.y);
+  ctx.stroke();
+
+  if (index === 0) {
+    gradient.addColorStop(0, `rgba(255, 255, 255, 0)`);
+    gradient.addColorStop(0.25, `rgba(255, 255, 255, 1)`);
+  } else {
+    gradient.addColorStop(0, `rgba(255, 255, 255, 1)`);
+  }
+  gradient.addColorStop(0.45, 'rgba(255, 255, 255, 0)');
+  gradient.addColorStop(0.55, 'rgba(255, 255, 255, 0)');
+  if (index === entries.length - 1) {
+    gradient.addColorStop(0.75, `rgba(255, 255, 255, 1)`);
+    gradient.addColorStop(1, `rgba(255, 255, 255, 0)`);
+  } else {
+    gradient.addColorStop(1, `rgba(255, 255, 255, 1)`);
+  }
+  ctx.globalCompositeOperation = 'destination-in';
+  ctx.fillStyle = gradient;
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
 }
 
 export default Timeline;
